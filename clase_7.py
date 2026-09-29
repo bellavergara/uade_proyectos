@@ -46,22 +46,23 @@ imprimirlista(lista)
 
 #EJERCICIO 1 /  CLASE 7
 """
-Escribir una funßcion para ingresar desde el teclado una serie de numeros entre A y B y guardarlos en una lista.
+Escribir una funcion para ingresar desde el teclado una serie de numeros entre A y B y guardarlos en una lista.
 En caso de ingresar un valor fuera de rango, la funcion mostrara un mensaje de error y solicitara un nuevo numero.
 Para finalizar la carga se debera ingresar -1. La funcion recibe como parametros los valores de A y B y devuelve la lista cargada
 (o vacia, si el usuario no ingreso nada). Como valor de retorno. Tener en cuenta que A pyede ser mayor, menor o igual a B.
 """
 
-def cargarlista(A,B):
-
+def cargarlista(A, B):
     lista =[]
     n = int(input(" Ingrese una serie de numeros entre A y B, para finalizar ingrese -1:"))
     while n!= -1:
         if n >= A and n <= B:
-         lista.append(n)
-    else:
-        print(" Error! ingreso valores fuera del rango de A y/ o B")
-    n = int(input("Ingrese nuevamente, una serie de numeros entre los rangos de A y B, para finalizar ingrese -1:"))
+          lista.append(n)
+        else:
+           print(" Error! ingreso valores fuera del rango de A y/ o B")
+        
+        n = int(input("Ingrese nuevamente, una serie de numeros entre los rangos de A y B, para finalizar ingrese -1:"))
+
     return lista
     
 
@@ -79,5 +80,6 @@ derecha y de derecha a izquierda.
 por ejemplo, [2,7,7,2]
 es capicula, mientras que [2,7,5,2] no lo es. 
 """
+
 
 # Ejercicio 4 : 
