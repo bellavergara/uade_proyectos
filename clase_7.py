@@ -54,26 +54,36 @@ Para finalizar la carga se debera ingresar -1. La funcion recibe como parametros
 
 def cargarlista(A, B):
     lista =[]
-    n = int(input(" Ingrese una serie de numeros entre A y B, para finalizar ingrese -1:"))
+    n = int(input(f'Ingrese una serie de numeros entre {A} y {B}, para finalizar ingrese -1: '))
     while n!= -1:
-        if n >= A and n <= B:
+        if (n >= A and n <= B) or (n <= A and n >= B):
           lista.append(n)
         else:
-           print(" Error! ingreso valores fuera del rango de A y/ o B")
+           print(f'Error! ingreso valores fuera del rango de {A} y/ o {B}')
         
-        n = int(input("Ingrese nuevamente, una serie de numeros entre los rangos de A y B, para finalizar ingrese -1:"))
+        n = int(input(f'Ingrese nuevamente, una serie de numeros entre los rangos de A y B, para finalizar ingrese -1: '))
 
     return lista
-    
 
-   # ejercicio 2 : calcular la suma de los numeros de la lista
+#print(f'Lista cargada: {cargarlista(1, 5)}')
+#print(f'Lista cargada: {cargarlista(9, 3)}')
+#print(f'Lista cargada: {cargarlista(7, 7)}')
+
+# Ejercicio 2 : calcular la suma de los numeros de la lista
 def calcularsuma(lista):
     suma = 0 
     for i in range(len(lista)):
-      suma += lista[i]
+        suma += lista[i]
+    
     return suma
+"""
+lista = cargarlista(1, 5)
 
-   # Ejercicio 3: 
+print(f'La lista cargada es: {lista}')
+print(f'La suma de los numeros de la lista es: {calcularsuma(lista)}')
+"""
+
+# Ejercicio 3: 
 """ 
 Determinar si la lista es capicúa(Palíndromo). Una lista capicúa se lee de igual modo de izquierda a
 derecha y de derecha a izquierda. 
@@ -81,5 +91,30 @@ por ejemplo, [2,7,7,2]
 es capicula, mientras que [2,7,5,2] no lo es. 
 """
 
+def es_palindromo(lista):
+    pass ## borrar esta linea
+
+es_palindromo(cargarlista(1,5))
+
+
+## 1,2,4,3,4,5 -> .pop() -> 1,2,4,3,4
+
+## izquierda = 1,2,3,4,5
+## derecha = []
+
+## izquierda = 1,2,3,4
+## derecha = 5
+
+## izquierda = 1,2,3
+## derecha = 5, 4
+
+## izquierda = 1,2
+## derecha = 5,4,3
+
+## izquierda = 1
+## derecha = 5,4,3,2
+
+## izquierda = []
+## derecha = 5,4,3,2,1
 
 # Ejercicio 4 : 
