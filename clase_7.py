@@ -76,12 +76,12 @@ def calcularsuma(lista):
         suma += lista[i]
     
     return suma
-"""
+
 lista = cargarlista(1, 5)
 
 print(f'La lista cargada es: {lista}')
 print(f'La suma de los numeros de la lista es: {calcularsuma(lista)}')
-"""
+
 
 # Ejercicio 3: 
 """ 
