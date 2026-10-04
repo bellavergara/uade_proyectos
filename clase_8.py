@@ -82,3 +82,4 @@ indicar que el elemento no se encuentra en la lista
 Con la lista del ejercicio anterior, realizar un programa que la ordene utilizando el método 
 de Selección. Imprimir la lista antes y después de ser ordenada.
 """
+
