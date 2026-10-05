@@ -92,29 +92,10 @@ es capicula, mientras que [2,7,5,2] no lo es.
 """
 
 def es_palindromo(lista):
-    pass ## borrar esta linea
+    return lista == lista[::-1]
 
 es_palindromo(cargarlista(1,5))
 
 
-## 1,2,4,3,4,5 -> .pop() -> 1,2,4,3,4
-
-## izquierda = 1,2,3,4,5
-## derecha = []
-
-## izquierda = 1,2,3,4
-## derecha = 5
-
-## izquierda = 1,2,3
-## derecha = 5, 4
-
-## izquierda = 1,2
-## derecha = 5,4,3
-
-## izquierda = 1
-## derecha = 5,4,3,2
-
-## izquierda = []
-## derecha = 5,4,3,2,1
 
 # Ejercicio 4 : 
