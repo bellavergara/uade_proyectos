@@ -1,6 +1,9 @@
 # EJEMPLOS DE CLASE
 import random
 
+"""
+import random
+
 def cargarLista(cantidad):
     lista=[]
 
@@ -68,16 +71,32 @@ print(lista)
 #else:
 #    print("El elemnto ",n, " NO se encontró en la lista")
 
-    
+   """  
 
 # EJERCICIO 1 / CLASE 8
 """ 
 Cargar una lista, donde la cantidad de elementos se ingrese por consola, generando los elementos al azar entre 1 y 200,
- y luego imprimir la lista. Ingresar un elemento a buscar e informar la posición del elemento , y si no se encuentra, 
+ y luego imprimir la lista.
+ Ingresar un elemento a buscar e informar la posición del elemento , y si no se encuentra, 
 indicar que el elemento no se encuentra en la lista
 """
-""" 
 
+
+
+
+""" 
+lista_usuario = []
+cantidad_elementos = int(input("Ingrese la cantidad de elementos que desea cargar en la lista :"))
+
+for i in range(cantidad_elementos):
+    lista_usuario.append(random.randint(1,200))
+
+print(f'la lista cargada es: {lista_usuario}')
+
+def buscar_elemento 
+
+"""
+""" 
 # EJERCICIO 2 / CLASE 8
 Con la lista del ejercicio anterior, realizar un programa que la ordene utilizando el método 
 de Selección. Imprimir la lista antes y después de ser ordenada.
