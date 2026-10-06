@@ -81,10 +81,6 @@ Cargar una lista, donde la cantidad de elementos se ingrese por consola, generan
 indicar que el elemento no se encuentra en la lista
 """
 
-
-
-
-""" 
 lista_usuario = []
 cantidad_elementos = int(input("Ingrese la cantidad de elementos que desea cargar en la lista :"))
 
@@ -93,9 +89,22 @@ for i in range(cantidad_elementos):
 
 print(f'la lista cargada es: {lista_usuario}')
 
-def buscar_elemento 
+def buscar_elemento(lista, elemento):
+    encontrado = False
+    for i in range(len(lista)):
+        if elemento == lista[i]:
+            print (f'El elemento {elemento} se encuntra en la posicion {i}')
+            encontrado = True
 
-"""
+    if not encontrado:
+        print(f'El elemento {elemento} no se encuentra en la lista')
+
+
+
+elemento_a_buscar = int(input("Ingrese el elemento que desea buscar en la lista: "))
+buscar_elemento(lista_usuario, elemento_a_buscar)
+
+# EJERCICIO 2 / CLASE 8
 """ 
 # EJERCICIO 2 / CLASE 8
 Con la lista del ejercicio anterior, realizar un programa que la ordene utilizando el método 
