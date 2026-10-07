@@ -81,6 +81,8 @@ Cargar una lista, donde la cantidad de elementos se ingrese por consola, generan
 indicar que el elemento no se encuentra en la lista
 """
 
+
+
 lista_usuario = []
 cantidad_elementos = int(input("Ingrese la cantidad de elementos que desea cargar en la lista :"))
 
@@ -111,3 +113,21 @@ Con la lista del ejercicio anterior, realizar un programa que la ordene utilizan
 de Selección. Imprimir la lista antes y después de ser ordenada.
 """
 
+
+
+def metodo_seleccion(lista):
+    largo = len(lista)
+
+    for i in range(largo - 1):
+        for j in range(i + 1, largo):
+            if lista[i] > lista[j]:
+                aux = lista[i]
+                lista[i] = lista[j]
+                lista[j] = aux
+
+
+print(f'La lista antes de ordenar es: {lista_usuario}')
+
+metodo_seleccion(lista_usuario)
+
+print(f'La lista después de ordenar es: {lista_usuario}')
