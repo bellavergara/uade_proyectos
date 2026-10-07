@@ -82,15 +82,6 @@ indicar que el elemento no se encuentra en la lista
 """
 
 
-
-lista_usuario = []
-cantidad_elementos = int(input("Ingrese la cantidad de elementos que desea cargar en la lista :"))
-
-for i in range(cantidad_elementos):
-    lista_usuario.append(random.randint(1,200))
-
-print(f'la lista cargada es: {lista_usuario}')
-
 def buscar_elemento(lista, elemento):
     encontrado = False
     for i in range(len(lista)):
@@ -103,8 +94,17 @@ def buscar_elemento(lista, elemento):
 
 
 
+lista_usuario = []
+cantidad_elementos = int(input("Ingrese la cantidad de elementos que desea cargar en la lista :"))
+
+for i in range(cantidad_elementos):
+    lista_usuario.append(random.randint(1,200))
+
+print(f'la lista cargada es: {lista_usuario}')
+
 elemento_a_buscar = int(input("Ingrese el elemento que desea buscar en la lista: "))
 buscar_elemento(lista_usuario, elemento_a_buscar)
+
 
 # EJERCICIO 2 / CLASE 8
 """ 
