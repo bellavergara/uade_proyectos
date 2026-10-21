@@ -138,3 +138,4 @@ listaC_.sort()
 print(f"Lista A: {listaA_}")
 print(f"Lista B: {listaB_}")
 print(f"Lista C: {listaC_}")
+ 
