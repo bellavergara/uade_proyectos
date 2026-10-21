@@ -10,8 +10,27 @@ La función deberá permitir determinar si el código ingresado puede ser utiliz
 """
 
 
+# crear una funcion de validacion cuando el usuario ingresa el codigo
+codigo_usuario = int(input("ingrese el codigo usario "))
+
+def validar_modelo()
+def validacion_codigo(codigo)
+
+    
+pass 
+""" 
+Al iniciar el sistema, la empresa deberá indicar la cantidad de vehículos que desea administrar. 
+Para cada vehículo se deberá ingresar toda la información necesaria. 
+El código identificador deberá ser un número de cinco cifras, comprendido entre 10000 y 99999. 
+No podrán existir dos vehículos con el mismo código. 
+Tampoco se permitirá registrar dos vehículos con la misma combinación de marca y modelo. 
+En caso de ingresar un dato inválido, deberá solicitarse nuevamente hasta que cumpla con las condiciones establecidas. 
+Inicialmente, todos los vehículos deberán encontrarse disponibles y la cantidad de alquileres deberá comenzar en cero. 
+
+"""
 def validarCodigo(codigo, matriz_vehiculos):
     pass
+
 
 
 """
