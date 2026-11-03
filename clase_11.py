@@ -126,6 +126,8 @@ for f in range(filas):
 suma = sumaMatriz(matriz, filas, columnas)
 print("La suma de los elementos de la matriz es:", suma)
 
+
+
 """ 
 3) EJERCICIO 3
 Multiplicar una matriz de 3x3 por un número y mostrar el resultado en una matriz resultante.
@@ -149,31 +151,33 @@ def llenarAleatorio(matriz,filas,columnas):
     return matriz
 
 
-def matrizResultante(matriz,filas,columnas,numero):
+def matrizResultante(matriz, filas, columnas, numero):
     resultante = crear_matriz(filas, columnas)
     for f in range(filas):
         for c in range(columnas):
-            resultante[f][c]= matriz[f][c] * numero
-            # acá va la multiplicación
-            return resultante
-
+            resultante[f][c] = matriz[f][c] * numero
+    return resultante
 
 
 limpiar_pantalla()
-filas = 2
-columnas = 2
+filas = 3
+columnas = 3
 
 matriz = crear_matriz(filas, columnas)
 llenarAleatorio(matriz, filas, columnas)
-#Matriz orginial
+
+numero = int(input("Ingrese el número por el que multiplicar: "))
+resultante = matrizResultante(matriz, filas, columnas, numero)
+
+print("Matriz original:")
+
 for f in range(filas):
     for c in range(columnas):
         print(matriz[f][c], " ", end="")
     print()
 
-#Matriz resultante
-
+print("Matriz resultante:")
 for f in range(filas):
     for c in range(columnas):
-        print(matriz[f][c], " ", end="")
+        print(resultante[f][c], " ", end="")
     print()

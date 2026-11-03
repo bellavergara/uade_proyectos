@@ -1,3 +1,6 @@
+import os
+import random 
+
 """
 FUNCION n1  ***
 
@@ -8,16 +11,27 @@ El código sea un número comprendido entre 10000 y 99999.
 El código no se encuentre repetido dentro de la matriz de vehículos.
 La función deberá permitir determinar si el código ingresado puede ser utilizado.
 """
+ #1. Crear la función validarCodigo, que recibe como parámetros: codigo y matriz_vehiculos
+# 2. Crear una bandera "valido" y ponerla en True (se asume que el código es válido)
+# 3. Verificar que el código esté entre 10000 y 99999; si no lo está, poner valido en False
+# 4. Recorrer la matriz con un for; en cada fila comparar el código de la columna 0 con el código recibido
+# 5. Si algún código de la matriz es igual al recibido, poner valido en False (está repetido)
+# 6. Devolver valido (True si se puede usar, False si no)
 
 
-# crear una funcion de validacion cuando el usuario ingresa el codigo
-codigo_usuario = int(input("ingrese el codigo usario "))
+def validarCodigo(codigo, matriz_vehiculos):
+    valido = True
 
-def validar_modelo()
-def validacion_codigo(codigo)
+    if codigo < 10000 or codigo > 99999:
+        valido = False
 
-    
-pass 
+    for i in range(len(matriz_vehiculos)):
+        if matriz_vehiculos[i][0] == codigo:
+            valido = False
+
+    return valido
+
+
 """ 
 Al iniciar el sistema, la empresa deberá indicar la cantidad de vehículos que desea administrar. 
 Para cada vehículo se deberá ingresar toda la información necesaria. 
@@ -26,10 +40,18 @@ No podrán existir dos vehículos con el mismo código.
 Tampoco se permitirá registrar dos vehículos con la misma combinación de marca y modelo. 
 En caso de ingresar un dato inválido, deberá solicitarse nuevamente hasta que cumpla con las condiciones establecidas. 
 Inicialmente, todos los vehículos deberán encontrarse disponibles y la cantidad de alquileres deberá comenzar en cero. 
-
 """
-def validarCodigo(codigo, matriz_vehiculos):
-    pass
+
+def validarModelo(matriz, modelo): 
+    valido = True
+    for i in range(len(matriz)):
+        if matriz[i][1].lower() == modelo.lower():
+            valido = False
+    return valido
+    
+
+
+
 
 
 
@@ -52,9 +74,40 @@ El día de alquiler deberá quedar inicializado de acuerdo con el diseño elegid
 No se permitirá registrar códigos repetidos ni vehículos con la misma marca y modelo.
 """
 
+def limpiar_pantalla():
+    # Si el sistema es Windows ('nt'), usa 'cls'. Si es Linux o Mac, usa 'clear'.
+    os.system('cls' if os.name == 'nt' else 'clear')
+
 
 def cargarVehiculos(matriz_vehiculos, cantidad):
-    pass
+    for i in range(cantidad):
+        # CODIGO
+        codigo = int(input("Ingrese el codigo del vehiculo: "))
+        while validarCodigo(codigo, matriz_vehiculos) == False:
+            print("Error! se ingreso un codigo invalido, vuelva a ingresarlo")
+            codigo = int(input("Ingrese el codigo del vehiculo: "))
+
+        # MARCA Y MODELO
+        marca_modelo = input("Ingrese la marca y modelo del vehiculo: ")
+        while validarModelo(matriz_vehiculos, marca_modelo) == False:
+            print("Error! esa marca y modelo ya existe, vuelva a ingresarla")
+            marca_modelo = input("Ingrese la marca y modelo del vehiculo: ")
+
+        # PRECIO
+        precio = int(input("Ingrese el precio del vehiculo: "))
+        while precio <= 0:
+            print("Error! se ingreso un precio invalido, vuelva a ingresar, por favor")
+            precio = int(input("Ingrese el precio del vehiculo: "))
+
+        # GUARDAR
+        matriz_vehiculos.append([codigo, marca_modelo, precio, "D", 0, 0])
+
+
+matriz_vehiculos = []
+cargarVehiculos(matriz_vehiculos, 2)
+print(matriz_vehiculos)
+
+limpiar_pantalla()
 
 
 """
