@@ -2,7 +2,6 @@
 #1 EJERCICIO 1
 
 import os
-
 import random
 """
 def limpiar_pantalla():

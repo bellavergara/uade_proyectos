@@ -51,10 +51,6 @@ def validarModelo(matriz, modelo):
     
 
 
-
-
-
-
 """
 FUNCION n2  ***
 Carga de vehículos  15 puntos.
